@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<title>机票预订</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="keywords">
+  <!--<base href="/itinerary">-->
+  <base href="." /> 
+  <link rel="stylesheet" type="text/css" href="../css/itinerary.css" />
+  <link href="../css/PageHeader_V4c212.css" rel="stylesheet" />
+ </head>
+ <body>
+	 <div class="cui-nav-bar">
+	 <div class="nav-bar-cont">
+	 <div class="slogan">让旅行生活更美好</div>
+	 <ul class="nav-bar-set">
+	 <li class="set-list myctrip-name" name="cui-nav-bar-set-list" id="nav-bar-set-myctrip-name" style="display:none">
+	 <a href="#" class="person-text nav-myctrip"><span class="set-text"><span class="member-name" name="nav-bar-d-info">普通会员</span><b class="n-arrow"></b></span></a>
+	 <ul class="per-drowndrop" style="display: none;" id="nav-bar-set-my-info">
+	 <li class="my-img">
+	 <a rel="nofollow" href="#"><img name="nav-bar-d-info" src="./images/platform/online/home/ico_deafult.png"></a>
+	 </li>
+	 <li class="sign-out">
+	 <a rel="nofollow" href="#">退出</a>
+	 </li>
+	 </ul>
+	 </li>
+	 <li class="set-list set-infor">
+	 <a href="/login.html" class="infor-num"><span style="color: blue;">您好，请登录</span></a>
+	 </li>
+	 <li class="set-list set-myctrip-list" name="cui-nav-bar-set-list">
+	 <a class="person-text nav-myctrip" href="#"><span class="set-text"> 我的携程 <b class="n-arrow"></b></span></a>
+	 <ul class="nav-drowndrop" style="display: none;">
+	 <li>
+	 <a rel="nofollow" href="#">我的收藏 </a>
+	 </li>
+	 <li>
+	 <a rel="nofollow" href="#">我的优惠券 </a>
+	 </li>
+	 </ul>
+	 </li>
+	 <li class="set-list set-myorder-list" name="cui-nav-bar-set-list">
+	 <a class="person-text nav-myctrip" rel="nofollow" href="#"><span class="set-text"> 我的订单 <b class="n-arrow"></b></span></a>
+	 <ul class="nav-drowndrop drowndrop-order" style="display: none;">
+	 <li>
+	 <a rel="nofollow" href="#">机票+相关订单 </a>
+	 </li>
+	 <li>
+	 <a rel="nofollow" href="#">酒店订单 </a>
+	 </li>
+	 <li>
+	 <a rel="nofollow" href="#">旅游订单 </a>
+	 </li>
+	 <li>
+	 <a rel="nofollow" href="#">火车票订单 </a>
+	 </li>
+	 <li>
+	 <a href="#">全部订单 </a>
+	 </li>
+	 <li>
+	 <a class="phone-line" href="#">手机号查订单 </a>
+	 </li>
+	 </ul>
+	 </li>
+	 <li class="set-list">
+	 <a class="person-text nav-per" href="#"><span class="set-text"> 客服中心 </span></a>
+	 </li>
+	 <li class="set-list set-phone" name="cui-nav-bar-set-list">
+	 <a href="#" class="person-text nav-myctrip"><span class="set-text"><i class="ico_app"></i></span></a>
+	 <ul class="phone-drowndrop" style="display: none;">
+	 <li class="ico_code">
+	 <img src="./images/platform/online/home/er_ctrip_app.jpg" alt=""><p>手机扫码快速下载</p>
+	 </li>
+	 <li class="ctrip-app">
+	 <a href="#">携程旅行手机版</a><i class="arrow-right"></i>
+	 </li>
+	 </ul>
+	 </li>
+	 <li class="set-list set-wechat" name="cui-nav-bar-set-list">
+	 <a href="#" class="person-text nav-myctrip"><span class="set-text"><i class="ico_wechat"></i></span></a>
+	 <ul class="wechat-drowndrop" style="display: none;">
+	 <li class="ico_code">
+	 <img src="./images/platform/online/home/er_ctrip_wechat.jpg" alt=""><p>携程订阅号：helloctrip</p>
+	 <p class="nth2">扫一扫，<span>领旅行福利</span>
+	 </p>
+	 </li>
+	 </ul>
+	 </li>
+	 </ul>
+	 </div>
+	 </div>
+	 <div class="cui_hd_cont">
+	 <div class="cui_hd">
+	 <input type="hidden" id="_searchboxNo_" value="ws_www20140409"><input type="hidden" id="_newHeaderFlag_" value="true">
+	 <div class="ctriplogo">
+	 <a title="携程旅行网" href="index.html">携程旅行网 </a>
+	 </div>
+	 <div class="cui_search">
+	 <input type="text" placeholder="搜索旅行地/酒店/旅游/景点门票/交通"><button type="button" id=""></button>
+	 <div class="cui_search_list" id="_allSearchResult" style="display:none;"></div>
+	 </div>
+	 <div class="nav-tel">
+	 <ul class="nav-tel-list" id="cui-nav-tel-list">
+	 <li> 境内：95010</li>
+	 <li class="tel-list-more">香港(中国)：xxxxxxx</li>
+	 <li class="tel-list-more">境外：xxxxxxx</li>
+	 </ul>
+	 </div>
+	 </div>
+	 </div>
+  <div style="display: inline;">
+  </div>
+  </head>
+<body class="gray_body version3" style="">
+ <div id="app"> 
+   <div>
+    <div id="base_bd" class="">
+     <div>
+      <div class="search_form clearfix" id="searchModify">
+       <div class="flight_way">
+        <!-- <div class="search_form_select">
+         <div class="search_form_select ">
+          <a class="select_echo" data-ubt="c_search_Type">往返<b class="arr_gray_sm arr_down"></b></a>
+          <ul class="search_form_option" style="display: none;">
+           <li class="option_item"><label>单程</label></li>
+           <li class="option_item"><label>多程</label></li>
+          </ul>
+         </div>
+        </div> -->
+       </div>
+	   
+       <div class="flight_attribute flight_attribute_roundtrip" id="flightTypeList">
+        <div class="first_line">
+         <div class="type_item" data-ubt="c_search_dcity">
+          <span class="ico_search_type ico_search_dcity"></span>
+          <div class="poi-components">
+           <input id="dcity0" placeholder="出发城市" type="text" autocomplete="nope" value="<%= data[0].start %>" />
+           <div>
+            <div></div>
+            <div></div>
+           </div>
+          </div>
+         </div>
+         <div class="type_item_change">
+          <a class="ico_change2"></a>
+         </div>
+         <div class="type_item" data-ubt="c_search_acity">
+          <span class="ico_search_type ico_search_acity"></span>
+          <div class="poi-components">
+           <input id="acity0" placeholder="到达城市" type="text" autocomplete="nope" value="<%= data[0].target %>" />
+           <div>
+            <div></div>
+            <div></div>
+           </div>
+          </div>
+         </div>
+         <div id="search_date_wrapper_0" class="type_item c_type_date" data-ubt="c_search_date">
+          <div class="date-components ">
+           <div class="date-inputs">
+            <div class="type_item">
+             <span class="ico_search_type ico_search_ddate"></span>
+             <input type="date" placeholder="出发日期" autocomplete="off" value="2020-05-19" />
+            </div>
+            <div class="type_item">
+             <span class="ico_search_type ico_search_adate"></span>
+             <input type="date" placeholder="返回日期" autocomplete="off" value="2020-05-21" />
+            </div>
+           </div>
+          </div>
+          <span class="c_type_wk_d"></span>
+          <span class="c_type_wk_a"></span>
+         </div>
+        </div>
+       </div>
+       <div class="search_tools clearfix">
+        <a class="btn_search" data-ubt="c_search_research" href="javascript:void(0)"><span>搜索</span></a>
+       </div>
+      </div>
+      <div class="search-history mb10 clearfix">
+      </div>
+     </div>
+     <div class="lv"> 
+     </div>
+    </div>
+   </div>
+  </div>
+  
+<div class="notices">
+</div>
+<i class="close"></i></div>
+  <div class="base_main" style="margin-right: 86px;">
+   <div class="searchresult_content">
+    <div class="cabinV2">
+     <div>
+      <div>
+       <div>
+        <div class="search_box search_box_tag search_box_light Label_Flight">
+         <div class="flight_card_content">
+			 <div class="flight-searching" style="margin-top: 30px;">
+			    <span class="flight-searching-type">&nbsp;</span>
+				<span><%= data[0].start %> ⇀ <%= data[0].target %></span>
+			    <!-- <span class="flight-searching-date">05月21号 周四</span> -->
+			   </div>
+			 <div class="sort-controls clearfix">
+			    <ul class="sorts sort-guideline">
+			     <li class="default-sort">航班信息</li>
+			     <li data-ubt="c_sort_dtime_down" class="dtime-sort"><a>起飞时间<i class="ico "></i></a></li>
+			     <li data-ubt="c_sort_atime_down" class="atime-sort"><a>到达时间<i class="ico "></i></a></li>
+			     <li data-ubt="c_sort_ontime_down" class="ontime-sort"><a>到达准点率<i class="ico "></i></a></li>
+			     <li data-ubt="c_sort_sale_down" class="sale-sort"><a></a></li>
+			     <li data-ubt="c_sort_price_down" class="price-sort current"><a>价格<i class="ico ico-sort"></i></a></li>
+			    </ul>
+			    <a class="government-btn" href="javascript:;" data-ubt="c_armydisabled_click">伤残军警通道</a>
+			    <div id="divArmyTip" class="government-btn-tip" style="display: none;">
+			     <i class="ico arrow"></i>
+			     <div class="m">
+			      温馨提示：伤残军警可由此购买优惠机票啦~
+			      <a href="javascript:;" class="government-btn-tip-close">&times;</a>
+			     </div>
+			    </div>
+			   </div>
+	<% for(var i=0; i < data.length; i++) { %> 
+	  <%if(data[i].tid!=null){%>
+          <div class="search_table_header">
+           <div class="inb right">
+            <div class="time_box">
+             <b style="font-size:12px" class="time"><%=(data[i].startTime)%></b>
+            </div>
+            <div class="airport">
+             <%=(data[i].begin)%>
+            </div>
+           </div>
+           <div class="inb center">
+            <div class="arrow"></div>
+           </div>
+           <div class="inb left">
+            <div class="time_box">
+             <b style="font-size:12px" class="time"><%=(data[i].endTime)%></b>
+            </div>
+            <div class="airport">
+             <%=(data[i].end)%>
+            </div>
+           </div>
+           <div class="inb service" style="margin-left:50px">
+            <div class="service-item">
+             到达准点率
+             <br />
+             <div class="clearfix" data-ubt-hover="c_flight_punctualityRate_Flight">
+              <div style="position: relative;">
+               <span class="direction_black_border" id="d03b402f-beea-4495-8969-4095144f9c5e">100%</span>
+               <div></div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="inb label" style="margin-left:50px">
+            <span><span id="d998145a-7a4d-4583-b64a-5570399fc3a8" class="ico_whole_aw new_tag" data-gift-code="" data-ubt-hover="c_flight_tag_RoundSpecial" style="display: inline-block; cursor: help;"><span class="c-react-frame">往返特惠</span>
+              <div></div></span></span>
+           </div>
+           <div class="inb price round_price" style="margin-left:50px">
+            <div>
+             <span class="base_price02"><dfn>&yen;</dfn> <%=(data[i].price)%></span>
+             <i>起</i> 
+             <br />
+             <div class="flight_price_tips">
+              <div>
+               <%=(data[i].num)%>
+              </div>
+              <div> 
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="inb book middle">
+            <a class="btn_book " href="/doTicket?tid=<%=(data[i].tid)%>">订 票</a>
+           </div>
+          </div>
+		  <%}%> 
+	 <% } %>
+		  
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div>
+     <div class="disclaimer" style="margin-top:200px"
+      <h3>航班信息免责声明:</h3>
+      <p>携程旅行网提供的各类航班相关的信息，包括但不限于舱位价格、餐食、起降准点率等，来源于中国航信、全国各大机场、航空公司及相关部门公布数据。由于这些信息可能随时变化，以及网络传输问题，携程提供的此类信息可能并非最新或存在误差，因此<b>仅供旅客作为一般参考</b>，任何公司或个人不能将此作为携程做出任何承诺或做出任何保证的依据。</p>
+     </div>
+     <div class="data_travelsky">
+      <span></span>数据信息由
+      <br />中国民航信息网络股份有限公司提供
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="base_side" id="demo_side" style="margin-left:86px">
+   <div class="  " style="top: 126px;">
+    <div class="side-box mb10">
+     <div class="hd">
+      筛选
+     </div>
+     <div class="bar-filter">
+      <div class="bar-filter-group" data-ubt="c_filter_routeType">
+       <a class="bar-filter-item">直飞<span class="bar-filter-item-deco"><b class="arr_gray_sm arr_right"></b></span></a>
+       <div class="bar-filter-select">
+        <li class="bar-filter-option" data-ubt="c_filter_routeType_Flight"><label><input type="checkbox" name="routeType" value="Flight" />直飞</label></li>
+       </div>
+      </div>
+      <div class="bar-filter-group" data-ubt="c_filter_ddateType">
+       <a class="bar-filter-item">起飞时段<span class="bar-filter-item-deco"><b class="arr_gray_sm arr_right"></b></span></a>
+       <div class="bar-filter-select">
+        <li class="bar-filter-option" data-ubt="c_filter_ddateType_MO"><label><input type="checkbox" name="ddateType" value="MO" />上午(6-12点)</label></li>
+        <li class="bar-filter-option" data-ubt="c_filter_ddateType_AF"><label><input type="checkbox" name="ddateType" value="AF" />下午(12-18点)</label></li>
+        <li class="bar-filter-option" data-ubt="c_filter_ddateType_EV"><label><input type="checkbox" name="ddateType" value="EV" />晚上(18-24点)</label></li>
+       </div>
+      </div>
+      <div class="bar-filter-group" data-ubt="c_filter_code">
+       <a class="bar-filter-item">航空公司<span class="bar-filter-item-deco"><b class="arr_gray_sm arr_right"></b></span></a>
+       <div class="bar-filter-select">
+        <li class="bar-filter-option" data-ubt="c_filter_code_ho"><label><input type="checkbox" name="code" value="ho" />吉祥航空</label></li>
+        <li class="bar-filter-option" data-ubt="c_filter_code_cz"><label><input type="checkbox" name="code" value="cz" />南方航空</label></li>
+        <li class="bar-filter-option" data-ubt="c_filter_code_ca"><label><input type="checkbox" name="code" value="ca" />中国国航</label></li>
+        <li class="bar-filter-option" data-ubt="c_filter_code_hu"><label><input type="checkbox" name="code" value="hu" />海南航空</label></li>
+        <li class="bar-filter-option" data-ubt="c_filter_code_mu"><label><input type="checkbox" name="code" value="mu" />东方航空</label></li>
+        <li class="bar-filter-option" data-ubt="c_filter_code_mf"><label><input type="checkbox" name="code" value="mf" />厦门航空</label></li>
+       </div>
+      </div>
+      <div class="bar-filter-group" data-ubt="c_filter_craftKind">
+       <a class="bar-filter-item">计划机型<span class="bar-filter-item-deco"><b class="arr_gray_sm arr_right"></b></span></a>
+       <div class="bar-filter-select">
+        <li class="bar-filter-option" data-ubt="c_filter_craftKind_L"><label><input type="checkbox" name="craftKind" value="L" />大型</label></li>
+        <li class="bar-filter-option" data-ubt="c_filter_craftKind_M"><label><input type="checkbox" name="craftKind" value="M" />中型</label></li>
+       </div>
+      </div>
+      <div class="bar-filter-group" data-ubt="c_filter_dportTlc">
+       <a class="bar-filter-item">起飞机场<span class="bar-filter-item-deco"><b class="arr_gray_sm arr_right"></b></span></a>
+       <div class="bar-filter-select">
+        <li class="bar-filter-option" data-ubt="c_filter_dportTlc_SHA"><label><input type="checkbox" name="dportTlc" value="SHA" />虹桥</label></li>
+        <li class="bar-filter-option" data-ubt="c_filter_dportTlc_PVG"><label><input type="checkbox" name="dportTlc" value="PVG" />浦东</label></li>
+       </div>
+      </div>
+      <div class="bar-filter-group" data-ubt="c_filter_aportTlc">
+       <a class="bar-filter-item">到达机场<span class="bar-filter-item-deco"><b class="arr_gray_sm arr_right"></b></span></a>
+       <div class="bar-filter-select">
+        <li class="bar-filter-option" data-ubt="c_filter_aportTlc_PEK"><label><input type="checkbox" name="aportTlc" value="PEK" />首都</label></li>
+        <li class="bar-filter-option" data-ubt="c_filter_aportTlc_PKX"><label><input type="checkbox" name="aportTlc" value="PKX" />大兴</label></li>
+       </div>
+      </div>
+      <div class="bar-filter-group" data-ubt="c_filter_cabinClass">
+       <a class="bar-filter-item">舱位<span class="bar-filter-item-deco"><b class="arr_gray_sm arr_right"></b></span></a>
+       <div class="bar-filter-select">
+        <li class="bar-filter-option" data-ubt="c_filter_cabinClass_Y"><label><input type="checkbox" name="cabinClass" value="Y" />经济舱</label></li>
+        <li class="bar-filter-option" data-ubt="c_filter_cabinClass_CF"><label><input type="checkbox" name="cabinClass" value="CF" />公务/头等舱</label></li>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="six_protection_small" style="margin: 0 auto">
+	   <img src="../images/protection-white2.png" />
+  </div>
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script src="./js/jquery.cookie.min.js"></script>
+  <script type="text/javascript">
+  	$(function(){
+  		var uName = $.cookie('username');
+  		var info = $(".set-infor");
+  		if(uName!=null && uName!="" && uName!=undefined){
+  				info.html("<a href='/logout'>欢迎！"+uName+"</a>")
+  		}
+  		/* $("#flightSwitch a").on("click",function(){
+  			$(this).addClass("current").siblings().removeClass("current");
+  			var styletag = $(this).attr("tag");
+  			if(styletag=="FD_ChinaFlightForm"){
+  				$("#fltInternational").hide();
+  			}else{
+  				$("#FD_ChinaFlightForm").hide();
+  			}
+  			$("#"+styletag).show();
+  			//$(this).siblings().hide();
+  		}) */
+		//搜索按钮
+		
+		$(".btn_search").on("click",function(){
+			var start = $("#dcity0").val();
+			var target = $("#acity0").val();
+			if(start==""){
+				alert("请输入出发城市！")
+				$("#dcity0").focus();
+				return;
+			}
+			if(target==""){
+				alert("请输入到达城市！")
+				$("#acity0").focus();
+				return;
+			}
+			//var dateTime = $("#FD_StartDate").val();
+			location.href="/doSearch?start="+start+"&target="+target;
+		})
+		
+		
+  		
+  	})
+  </script> 
+  
+ </body></html>

@@ -1,0 +1,14 @@
+ var express = require('express');  //调用模板
+    var app = express();
+    var bodyParser = require('body-parser');  //调用模板
+	var session = require('express-session');
+	var FileStore = require('session-file-store')(session);
+	var moment = require('moment');
+	//*********************************************************
+	var path = require('path');
+	var ejs = require('ejs');  //我是新引入的ejs插件
+
+*************************************
+node_modules  //此处已删除依赖的npm包
+
+require的包都要使用 npm 进行安装
